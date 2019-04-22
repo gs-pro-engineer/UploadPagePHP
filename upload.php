@@ -4,7 +4,7 @@
 
     $theerrors = []; // Store all foreseen and unforseen errors here
 
-    $myextens = ['png']; // Get all the file extensions
+    $myextens = ['png', 'jpg']; // Set your desired file extensions
 
     $fname = $_FILES['myfile']['name'];
     $fsize = $_FILES['myfile']['size'];
@@ -17,7 +17,7 @@
     if (isset($_POST['submit'])) {
 
         if (! in_array($theext,$myextens)) {
-            $theerrors[] = "This file extension is not allowed. Please upload a CSV file";
+            $theerrors[] = "This file extension is not allowed. Please upload a PNG or JPG file";
         }
 
         if ($fsize > 2000000) {
