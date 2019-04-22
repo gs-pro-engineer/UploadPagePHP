@@ -29,6 +29,8 @@
 
             if ($didUpload) {
                 echo "The file " . basename($fname) . " has been uploaded";
+                header("Refresh:5; url=index.php");
+
             } else {
                 echo "An error occurred somewhere. Try again or contact the admin";
             }
